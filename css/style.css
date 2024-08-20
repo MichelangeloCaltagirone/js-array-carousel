@@ -6,11 +6,6 @@
 }
 
 
-/* General */
-
- 
-
-
 /* Utility */
 
 #cstcontainer {
@@ -30,8 +25,25 @@
         display: none;
     }
 }
+#thumbnails {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+
+    img {
+        width: 19%;
+        height: 80px;
+        border-radius: 10px;
+        filter: grayscale(1);
+    }
+}
+/* Active class style */
 #gallery .active {
     display: block;
+}
+#thumbnails .active {
+    filter: grayscale(0);
+    box-shadow: 0 0 5px blueviolet;
 }
 
 /* fake-Btn per controllo */
