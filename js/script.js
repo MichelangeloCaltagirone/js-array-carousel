@@ -34,4 +34,49 @@ dell'esercizio.
 Scriviamo sempre prima per punti il nostro algoritmo in italiano per capire cosa vogliamo fare
 */
 
-console.log('ciao');
+
+// Preprarzione dati noti
+sources = ['img/01.webp', 'img/02.webp', 'img/03.webp', 'img/04.webp', 'img/05.webp']
+
+// Recupero elementi dal DOM
+const btnPrev = document.getElementById('prev');
+const btnNext = document.getElementById('next');
+const carouselGallery = document.querySelector('.gallery');
+
+let imgs = '' // mi preparo la stringa da montare nel DOM
+
+for (let i = 0; i < sources.length; i++) {
+    imgs += `<img alt="landscape-${i + 1}" src="${sources[i]}">`  // creo la stringa ciclando gli indici dell'array
+}
+gallery.innerHTML = imgs;    // modifico il DOM
+
+const images = document.querySelectorAll('#carousel img');
+
+// Mostro la prima(nell'array) immagine in pagina
+let currentActiveIndex = 0;
+images[currentActiveIndex].classList.add('active');
+
+
+// Eventi dinamici 
+// Prev btn
+btnPrev.addEventListener('click', function() {
+    // tolgo classe attiva
+    images[currentActiveIndex].classList.remove('active');
+
+    currentActiveIndex--;
+
+    images[currentActiveIndex].classList.add('active');
+})
+// Next btn
+btnNext.addEventListener('click', function() {
+    // tolgo classe attiva
+    images[currentActiveIndex].classList.remove('active');
+
+    currentActiveIndex++;
+
+    images[currentActiveIndex].classList.add('active');
+})
+
+
+
+
