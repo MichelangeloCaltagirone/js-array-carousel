@@ -64,6 +64,8 @@ btnPrev.addEventListener('click', function() {
     images[currentActiveIndex].classList.remove('active');
 
     currentActiveIndex--;
+    // dopo il decremento, controllo di non uscire dall'array, in tal caso lo riporto alla fine
+    if (currentActiveIndex < 0) currentActiveIndex = images.length - 1;
 
     images[currentActiveIndex].classList.add('active');
 })
@@ -73,6 +75,8 @@ btnNext.addEventListener('click', function() {
     images[currentActiveIndex].classList.remove('active');
 
     currentActiveIndex++;
+    // dopo l'incremento, controllo di non uscire dall'array, in tal caso lo riporto all'inizio
+    if (currentActiveIndex === images.length) currentActiveIndex = 0;
 
     images[currentActiveIndex].classList.add('active');
 })
