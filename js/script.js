@@ -33,3 +33,5 @@ andiamo pure a riguardare alcuni argomenti. Non dedichiamo però al ripasso più
 dell'esercizio.
 Scriviamo sempre prima per punti il nostro algoritmo in italiano per capire cosa vogliamo fare
 */
+
+console.log('ciao');

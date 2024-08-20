@@ -1,0 +1,47 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* General */
+
+ 
+
+
+/* Utility */
+
+#cstcontainer {
+    max-width: 900px;
+    margin: 4rem auto 0 auto;
+}
+#carousel {
+    position: relative;
+}
+#gallery {
+    height: 400px;
+
+    img {
+        width: 100%;
+        max-height: 100%;
+        border-radius: 15px;
+    }
+}
+
+/* fake-Btn per controllo */
+.bi {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    text-shadow: 0 0 5px lightcoral;
+    cursor: pointer;
+}
+#prev {
+    left: -45px;    
+}
+#next {
+    right: -45px;
+}
